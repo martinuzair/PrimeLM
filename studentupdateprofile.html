@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update User Profile</title>
+    <link rel="stylesheet" href="themes.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <center>
+        <div class="updateprofile-box">
+            <div class="box-title">
+                Update Profile
+            </div>
+            
+            <br>
+            <br>
+
+            <form>
+                <label id="CurrentEmail-txt" for="currentEmail">Current Email:</label><br>
+                <input type="text" id="currentEmail" name="currentEmail" value="current_email@example.com" readonly><br><br>
+        
+                <label id="CurrentPassword-txt" for="currentPassword">Current Password:</label><br>
+                <input type="password" id="currentPassword" name="currentPassword" value="********" readonly><br><br>
+        
+                <label id="NewEmail-txt" for="newEmail">New Email:</label><br>
+                <input type="email" id="newEmail" name="newEmail" required><br><br>
+        
+                <label id="NewPassword-txt" for="newPassword">New Password:</label><br>
+                <input type="password" id="newPassword" name="newPassword" required><br><br>
+        
+                <input id="UpdateButton" type="submit" value="Confirm">
+            </form>
+        </div>
+    </center>
+
+    <div class="top-left">
+		<img src="TransPrimeLM.png" alt="">
+	</div>
+
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <!--<i class='bx bxl-codepen'></i>
+                <span>PrimeLM</span>-->
+                <img class="resize" src="TransPrimeLM.png" alt="">
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <div class="user">
+            <img src="profile-pic.png" alt="me" class="user-img">
+            <div>
+                <p class="bold">Name</p>
+                <p>Student</p>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class='bx bx-bulb'></i>
+                    <span class="nav-item">Quiz</span>
+                </a>
+                <span class="tooltip">Quiz</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-cog"></i>
+                    <span class="nav-item">Settings</span>
+                </a>
+                <span class="tooltip">Settings</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-home-alt' ></i>
+                    <span class="nav-item">Home</span>
+                </a>
+                <span class="tooltip">Home</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-log-out"></i>
+                    <span class="nav-item">Log Out</span>
+                </a>
+                <span class="tooltip">Log Out</span>
+            </li>
+        </ul>
+   </div> 
+
+    <script>
+        let btn = document.querySelector('#btn')
+        let sidebar = document.querySelector('.sidebar')
+        btn.onclick = function () {
+            sidebar.classList.toggle('active')
+        };
+	</script>
+</body>
+</html>
